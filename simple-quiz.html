@@ -1,0 +1,55 @@
+
+<body>
+    <script>
+        let questions=[
+            {
+                question:"what is the capital of france"?
+                options : {A:"berlin",B:"madrid",C:paris,D:"rome"},
+                 answer:"c"
+            },
+        
+         
+            {
+
+                question:"what is 2+2"?
+                options:{A:"3",B:"4",c:"5",d:"6"},
+                answer:"B"
+            }];
+
+            let score=0;
+            function askquestion(index)
+            {
+                let q=question[index];
+                let useranswer = prompt(
+                    `${q.option}\na; ${q.options.A}/nB;
+                    ${q.option.B}\nc; ${q.option.c}/nd;
+                    ${q.option.D}\n\n chose A,B,C or D;`
+                );
+                if(useranswer .touppercase()===q.answer)
+            {
+                score++;
+                alert("correct! your score is : " +score);
+
+            }
+            else
+            {
+                alert("incorrect! your score is:" +score);
+            }
+            }
+            function startquiz()
+            {
+                for (let i=0;i<questions.length;i++)
+            
+            {
+                asquestions(i);
+            }
+            alert("quiz finished! your final score is :" + score);
+
+            }
+            startquiz();
+            
+        
+    </script>
+    
+</body>
+</html>
